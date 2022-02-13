@@ -1,10 +1,12 @@
 # Using Neural nets to recognize handwritten digits
+
 ## Perceptrons
-- What is a neural network?
-    - A type of artificial neuron called a perceptron.
+
+### - What is a neural network?
+- A type of artificial neuron called a perceptron.
 
 
-- How do perceptrons work?
+### - How do perceptrons work?
   - A perceptron takes several binary inputs, x1, x2, ..., and produce 
 a **single** binary output.
   - Introduce weights, w1, w2, ..., real numbers expressing the importance 
@@ -19,3 +21,5 @@ the second layer can make a complex and abstract decision. More complex decision
     - move threshold to the other side of the inequality and replace it by *bias*: **b**
     - ![img.png](chapter1img/img2.png)
     - Bias is like a measure of how easy it is to get the perceptron to output a 1
+
+## Sigmoid neurons
