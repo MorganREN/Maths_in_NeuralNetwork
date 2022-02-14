@@ -43,4 +43,25 @@ network to completely change** is some very complicated way.
 - Suppose **z ≡ w⋅x+b**  is a large positive number. Then e−z≈0  and so σ(z)≈1.
 - Shape of the sigmoid function:![img.png](chapter1img/img7.png)
 - The smoothness of σ means that small changes Δwj in the weights and Δb in the bias will produce a small change Δoutput in the output from the neuron. In fact, calculus tells us that Δoutput is well approximated by
-![img.png](chapter1img/img8.png)
+![img.png](chapter1img/img8.png) where the sum is over all the weights, wj, and ∂output/∂wj and ∂output/∂b denote *partial derivatives* of the output with respect to wj and b, respectively.
+
+
+## The architechture of neural networks
+
+### - Explain some terminology that lets us name different parts of a network
+- ![img.png](chapter1img/img9.png)
+The "hidden" layer just means that its neither input layer nor output layer
+- To recognize digit, assume the image is a 64 by 64 greyscale image, then there are 4096 input neurons with the intensities scaled appropriatedly between 0 and 1
+- The output layer contain a single neuron, with output values of less than 0.5 indicating "input image is not a 9" and ...
+- Such networks are called **feedforward neural networks**, which means there are no loops in the network - information is always fed forward and never fed back
+- For models which feedback loops are possible are called **recurrent neural networks**. 
+
+
+## A simple network to classify handwritten digits
+
+- To recognize individual digits we will use a three-layer neural network:![img.png](chapter1img/img10.png)
+- Out training images are 28 x 28 pixel images and so the input layer contains 784 neurons. 
+- The second layer of the network is a hidden layer. The number of neurons in this hidden layer is n, and we'll experiment with different values for n
+- The output layer contains 10 neurons. The neuron has the highest activation value will indicate what number the digit is.
+- As 4 neurons are enough to encode the answer, why we use 10:
+  - the network with 10 output neurons learns to recognize digits better than the network with 4 output neurons.
